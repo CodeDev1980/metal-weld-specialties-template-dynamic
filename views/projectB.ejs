@@ -43,8 +43,8 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/california">California Projects</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Project Data</li>
+                <li class="breadcrumb-item"><a href="/nevada">Nevada Projects</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><%= NevadaProject.title %></li>
             </ol>
         </nav>
 
@@ -52,14 +52,25 @@
         <section class="mb-8">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <p class="text-muted mb-4">***** { Single Page Project Info (LOADED FROM DATABASE} *****</p>
-                    <p class="h3 mb-4">Projects We're Proud Of - Team Work Makes The Dream Work</p>
-                    <p class="mb-4 mb-md-5 mb-lg-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo inventore veritatis et quasi architecto beatae vitae dicta explicabo.</p>
+                    <p class="text-muted mb-4">
+                        <b>Date posted:</b> <%= NevadaProject.datePosted.toLocaleString() %>
+                        <br>
+                        <b>Date completed:</b> <%= NevadaProject.dateFinished %>
+                        <br>
+                        <b>Location:</b> <%= NevadaProject.location %>
+                    </p>
+                    <p class="h3 mb-4"><%= NevadaProject.title %></p>
+                    <p class="mb-4 mb-md-5 mb-lg-0">
+                        <%= NevadaProject.details %>
+                    </p>
+                    <% if(loggedIn) { %>
+                        <a href="/delete/arizonaProject/<%= NevadaProject._id %>" class="btn btn-outline-warning">Delete Project</a>
+                    <% } %>
                 </div>
                 <div class="col-lg-6 offset-lg-1">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" class="w-100 rounded-5 mb-4 shadow-3-soft" alt="Sample image"
+                            <img src="<%= NevadaProject.image %>" class="w-100 rounded-5 mb-4 shadow-3-soft" alt="<%= NevadaProject.title %>"
                                  data-mdb-toggle="animation"
                                  data-mdb-animation="fade-in"
                                  data-mdb-animation-start="onScroll"

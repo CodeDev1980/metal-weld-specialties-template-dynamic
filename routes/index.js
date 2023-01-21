@@ -47,17 +47,17 @@ router.get('/delete/arizonaProject/:id', authorized, deleteArizonaProjectControl
 // Nevada
 router.post('/store/nevadaProject', newNevadaProjectController);
 router.get('/nevada', nevadaController);
-router.get('/projectB', singleNevadaPageController);
+router.get('/projectB/:id', singleNevadaPageController);
 router.get('/delete/nevadaProject/:id', authorized, deleteNevadaProjectController);
 // California
 router.post('/store/californiaProject', newCaliforniaProjectController);
 router.get('/california', californiaController);
-router.get('/projectC', singleCaliforniaPageController);
+router.get('/projectC/:id', singleCaliforniaPageController);
 router.get('/delete/californiaProject/:id', authorized, deleteCaliforniaProjectController);
 // Hawaii
 router.post('/store/hawaiiProject', newHawaiiProjectController);
 router.get('/hawaii', hawaiiController);
-router.get('/projectH', singleHawaiiPageController);
+router.get('/projectH/:id', singleHawaiiPageController);
 router.get('/delete/hawaiiProject/:id', authorized, deleteHawaiiProjectController);
 // Admin control
 router.get('/registerStaff', registerStaffController);
