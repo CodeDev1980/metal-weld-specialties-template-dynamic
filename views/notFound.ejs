@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') -%>
+    <style>
+        .img-position {
+            position: absolute;
+            top: 140px;
+            left: 40px;
+        }
+        .logoBrandSize {
+            height: 140px;
+        }
+        .introFit {
+            padding-top: 430px;
+        }
+        .card.hover-shadow-light, .hover-shadow-light {
+            transition: all .5s ease-in-out;
+        }
+
+        .card.hover-shadow-light:hover, .hover-shadow-light:hover {
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
+            transition: all .5s ease-in-out;
+        }
+        body {
+            background: url('http://cdn.static-economist.com/sites/default/files/404.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Start your project here-->
+<!--Section: Design Block-->
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+</header>
+
+<!--Section: Design Block-->
+<!-- Container for demo purpose -->
+<div class="container-fluid my-5 py-5">
+    <!-- Container for demo purpose only -->
+    <div class="container pt-5">
+
+        <div class="d-flex justify-content-center align-items-center" style="height: 60vh;">
+            <div class="text-center">
+                <h1 class="text-warning">Page Not Found</h1>
+                <a href="/" class="btn btn-primary btn-lg"><i class="fas fa-chevron-circle-left"></i> back to home page</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Container for demo purpose only -->
+</div>
+<!-- Container for demo purpose -->
+
+<!-- Footer -->
+<%- include('partials/footer') -%>
+<!-- Footer -->
+<!-- End your project here-->
+<%- include('partials/scripts') -%>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') -%>
+    <style>
+        .img-position {
+            position: absolute;
+            top: 140px;
+            left: 40px;
+        }
+        .logoBrandSize {
+            height: 140px;
+        }
+        .introFit {
+            padding-top: 430px;
+        }
+        .card.hover-shadow-light, .hover-shadow-light {
+            transition: all .5s ease-in-out;
+        }
+
+        .card.hover-shadow-light:hover, .hover-shadow-light:hover {
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
+            transition: all .5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Start your project here-->
+<!--Section: Design Block-->
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+</header>
+
+<!--Section: Design Block-->
+<!-- Container for demo purpose -->
+<br><br>
+<div class="container-fluid my-5 py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-10 text-center">
+            <h1 class="display-5 mb-0">Admin Projects Page</h1>
+            <p>
+                Here you can create new projects and delete old ones. If you have any trouble with logging in or need assistance, please contact the
+                <a href="mailto:stephenbrooks714@gmail.com" class="text-decoration-underline fw-bold">Developer</a>.
+            <div class="text-center mt-3">
+                <a href="/createProjects" class="btn btn-outline-black btn-lg">Create New Project</a>
+            </div>
+            </p>
+            <div class="row mt-5">
+                <div class="col-md-6 p-4">
+                    <h3>Arizona Office Projects</h3>
+                    <% for(i=0; i < manageArizona.length; i++) { %>
+                    <div class="card p-2 m-3">
+                        <h3><%= manageArizona[i].title %></h3>
+                        <img src="<%= manageArizona[i].image %>" class="img-fluid" alt="<%= manageArizona[i].title %>">
+                        <p>
+                            <%= manageArizona[i].details.substring(0,80) %> . . .
+                        </p>
+                        <a href="/projectA/<%= manageArizona[i]._id %>" class="btn m-2 btn-outline-info">View More Details</a>
+                        <a href="/delete/arizonaProject/<%= manageArizona[i]._id %>" class="btn m-2 btn-outline-danger">Delete This</a>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="col-md-6 p-4">
+                    <h3>Nevada Office Projects</h3>
+                    <% for(i=0; i < manageNevada.length; i++) { %>
+                        <div class="card p-2 m-3">
+                            <h3><%= manageNevada[i].title %></h3>
+                            <img src="<%= manageNevada[i].image %>" class="img-fluid" alt="<%= manageNevada[i].title %>">
+                            <p>
+                                <%= manageNevada[i].details.substring(0,80) %> . . .
+                            </p>
+                            <a href="/projectA/<%= manageNevada[i]._id %>" class="btn m-2 btn-outline-info">View More Details</a>
+                            <a href="/delete/arizonaProject/<%= manageNevada[i]._id %>" class="btn m-2 btn-outline-danger">Delete This</a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-6 p-4">
+                    <h3>California Office Projects</h3>
+                    <% for(i=0; i < manageCalifornia.length; i++) { %>
+                        <div class="card p-2 m-3">
+                            <h3><%= manageCalifornia[i].title %></h3>
+                            <img src="<%= manageCalifornia[i].image %>" class="img-fluid" alt="<%= manageCalifornia[i].title %>">
+                            <p>
+                                <%= manageCalifornia[i].details.substring(0,80) %> . . .
+                            </p>
+                            <a href="/projectA/<%= manageCalifornia[i]._id %>" class="btn m-2 btn-outline-info">View More Details</a>
+                            <a href="/delete/arizonaProject/<%= manageCalifornia[i]._id %>" class="btn m-2 btn-outline-danger">Delete This</a>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="col-md-6 p-4">
+                    <h3>Hawaii Office Projects</h3>
+                    <% for(i=0; i < manageHawaii.length; i++) { %>
+                        <div class="card p-2 m-3">
+                            <h3><%= manageHawaii[i].title %></h3>
+                            <img src="<%= manageHawaii[i].image %>" class="img-fluid" alt="<%= manageHawaii[i].title %>">
+                            <p>
+                                <%= manageHawaii[i].details.substring(0,80) %> . . .
+                            </p>
+                            <a href="/projectA/<%= manageHawaii[i]._id %>" class="btn m-2 btn-outline-info">View More Details</a>
+                            <a href="/delete/arizonaProject/<%= manageHawaii[i]._id %>" class="btn m-2 btn-outline-danger">Delete This</a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <a href="/createProjects" class="btn btn-outline-black btn-lg">Create New Project</a>
+    </div>
+</div>
+<!-- Container for demo purpose -->
+
+<!-- Footer -->
+<%- include('partials/footer') -%>
+<!-- Footer -->
+<!-- End your project here-->
+<%- include('partials/scripts') -%>
+</body>
+
+</html>

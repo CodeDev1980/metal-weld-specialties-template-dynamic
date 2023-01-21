@@ -5,7 +5,7 @@ const ArizonaProjectSchema = new Schema ({
     title: String,
     details: String,
     image: String,
-    url: String,
+    location: String,
     dateFinished: String,
     userid: {
         type: mongoose.Schema.Types.ObjectId,

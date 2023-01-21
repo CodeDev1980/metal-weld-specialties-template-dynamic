@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#!">
+        <a class="navbar-brand" href="/">
             <img src="/img/navLogo.png" height="65" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
@@ -11,14 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link fw-bold text-bg-light" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.ejs">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.ejs">Contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
+                <% if(loggedIn){ %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+                <% } %>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a
@@ -33,27 +38,39 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li>
-                            <a class="dropdown-item active text-bg-dark" aria-current="page" href="arizona.ejs">Arizona</a>
+                            <a class="dropdown-item" href="/arizona">Arizona</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="nevada.ejs">Nevada</a>
+                            <a class="dropdown-item" href="/nevada">Nevada</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="california.ejs">California</a>
+                            <a class="dropdown-item" href="/california">California</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="hawaii.ejs">Hawaii</a>
+                            <a class="dropdown-item" href="/hawaii">Hawaii</a>
                         </li>
                     </ul>
                 </li>
             </ul>
             <ul class="navbar-nav d-flex flex-row">
-
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="staffAccount.ejs">
-                        Staff Login
-                    </a>
-                </li>
+                <% if(loggedIn){ %>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="/staff/logout">
+                            Logout
+                        </a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="/staffAccount">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="/registerStaff">
+                            SignUp
+                        </a>
+                    </li>
+                <% } %>
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="https://www.linkedin.com/company/metal-weld-specialties-inc-/about/" target="_blank">
                         <img src="/img/linkedin.png" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">
