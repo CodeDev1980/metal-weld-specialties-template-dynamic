@@ -18,7 +18,7 @@ module.exports = {
       'mdb': 'mdb',
     }),
     new CopyWebpackPlugin([
-      { from: Path.resolve(__dirname, '../src/index.html') },
+      { from: Path.resolve(__dirname, '../src/index.ejs') },
       { from: Path.resolve(__dirname, '../src/img'), to: 'img' },
     ]),
     new FixStyleOnlyEntriesPlugin(),

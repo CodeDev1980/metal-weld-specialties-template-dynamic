@@ -40,6 +40,14 @@
             box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
             transition: all .5s ease-in-out;
         }
+        @media(max-width: 850px){
+            #hide1 {
+                display: none;
+            }
+            #hide2 {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -61,14 +69,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.html">Home</a>
+                        <a class="nav-link text-dark" href="index.ejs">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="about.html">About</a>
+                        <a class="nav-link text-dark" href="about.ejs">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        <a class="nav-link text-dark" href="contact.ejs">Contact</a>
                     </li>
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
@@ -84,13 +92,16 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>
-                                <a class="dropdown-item" href="arizona.html">Arizona</a>
+                                <a class="dropdown-item active text-bg-dark" aria-current="page" href="arizona.html">Arizona</a>
                             </li>
                             <li>
-                                <a class="dropdown-item active text-bg-dark" aria-current="page" href="nevada.html">Nevada</a>
+                                <a class="dropdown-item" href="nevada.ejs">Nevada</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="hawaii.html">Hawaii</a>
+                                <a class="dropdown-item" href="california.ejs">California</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="hawaii.ejs">Hawaii</a>
                             </li>
                         </ul>
                     </li>
@@ -98,7 +109,7 @@
                 <ul class="navbar-nav d-flex flex-row">
 
                     <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link text-dark" href="staffAccount.html">
+                        <a class="nav-link text-dark" href="staffAccount.ejs">
                             Staff Login
                         </a>
                     </li>
@@ -130,62 +141,87 @@
 <div class="container-fluid my-5 py-5">
     <!-- Container for demo purpose only -->
     <div class="container pt-5">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="nevada.html">Nevada Projects</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Project Data</li>
-            </ol>
-        </nav>
 
         <!-- Section: Design Block -->
         <section class="mb-8">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <p class="text-muted mb-4">***** { Single Page Project Info (LOADED FROM DATABASE} *****</p>
-                    <p class="h3 mb-4">Projects We're Proud Of - Team Work Makes The Dream Work</p>
-                    <p class="mb-4 mb-md-5 mb-lg-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo inventore veritatis et quasi architecto beatae vitae dicta explicabo.</p>
+            <div class="row">
+                <div class="col-2 text-center">
+                    <a href="hawaii.ejs">
+                        <h5><i class="fas fa-chevron-circle-left"></i> <span id="hide1">Hawaii</span></h5>
+                    </a>
                 </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" class="w-100 rounded-5 mb-4 shadow-3-soft" alt="Sample image"
-                                 data-mdb-toggle="animation"
-                                 data-mdb-animation="fade-in"
-                                 data-mdb-animation-start="onScroll"
-                                 data-mdb-animation-on-scroll="repeat"
-                                 data-mdb-animation-show-on-load="false"
-                                 data-mdb-animation-duration="2000"
-                                 data-mdb-animation-delay="100">
-                            <div class="row">
-                                <div class="col-md-9 offset-md-3">
-                                    <img src=" https://mdbootstrap.com/img/Photos/Others/img4.jpg" class="w-100 rounded-5 mb-4 mb-md-0 shadow-3-soft" alt="Sample image"
-                                         data-mdb-toggle="animation"
-                                         data-mdb-animation="fade-in"
-                                         data-mdb-animation-start="onScroll"
-                                         data-mdb-animation-on-scroll="repeat"
-                                         data-mdb-animation-show-on-load="false"
-                                         data-mdb-animation-duration="2000"
-                                         data-mdb-animation-delay="500">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" class="w-100 rounded-5 mt-md-5 shadow-3-soft" alt="Sample image"
-                                 data-mdb-toggle="animation"
-                                 data-mdb-animation="fade-in"
-                                 data-mdb-animation-start="onScroll"
-                                 data-mdb-animation-on-scroll="repeat"
-                                 data-mdb-animation-show-on-load="false"
-                                 data-mdb-animation-duration="2000"
-                                 data-mdb-animation-delay="300">
-                        </div>
+
+                <div class="col-8 text-center">
+                    <h3 class="mb-4 pb-2">Arizona Projects</h3>
+                    <p class="mx-auto lead mb-5 pb-3" style="max-width: 700px;">
+                        8137 N 83rd Ave, Peoria, AZ <br>
+                        (623) 979-1117
+                    </p>
+                </div>
+
+                <div class="col-2 text-center">
+                    <a href="nevada.ejs">
+                        <h5><span id="hide2">Nevada</span> <i class="fas fa-chevron-circle-right"></i></h5>
+                    </a>
+                </div>
+            </div>
+            <div class="lightbox">
+                <div class="row text-center">
+                    <div class="col-lg-4">
+                        <a href="projectA.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+                        <img src="/assets/CCV%20LaveenArizona.jpg"
+                             data-mdb-img="/assets/CCV%20LaveenArizona.jpg" alt="Image"
+                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
+
+                        <a href="projectA.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+                        <img src="/assets/ClubHouse.png"
+                             data-mdb-img="/assets/ClubHouse.png" alt="Image"
+                             class="w-100 mb-4 mb-lg-0 rounded-5 shadow-3-soft" />
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="projectA.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+                        <img src="/assets/FlagstaffMedicalCenter-Arizona.jpg"
+                             data-mdb-img="/assets/FlagstaffMedicalCenter-Arizona.jpg" alt="Image"
+                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        <a href="projectA.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+                        <img src="/assets/GCC-Arizona.jpg"
+                             data-mdb-img="/assets/GCC-Arizona.jpg" alt="Image"
+                             class="w-100 mb-4 mb-lg-0 rounded-5 shadow-3-soft" />
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="projectA.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+                        <img src="/assets/Luke%20Air%20Force%20Base%20-%20Arizona.JPG"
+                             data-mdb-img="/assets/Luke%20Air%20Force%20Base%20-%20Arizona.JPG" alt="Image"
+                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        <a href="projectA.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+                        <img src="/assets/NAU%20Scince%20Building%20-%20Flagstaff%20Arizona.jpg"
+                             data-mdb-img="/assets/NAU%20Scince%20Building%20-%20Flagstaff%20Arizona.jpg" alt="Image"
+                             class="w-100 rounded-5 shadow-3-soft" />
                     </div>
                 </div>
             </div>
         </section>
         <!-- Section: Design Block -->
-
+        <div class="row row-cols-lg-6 d-flex mx-auto justify-content-center align-items-center text-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="hawaii.ejs" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link active text-primary" aria-current="page" href="#">Arizona</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Nevada</a></li>
+                    <li class="page-item"><a class="page-link" href="#">California</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Hawaii</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="nevada.ejs" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <!-- Container for demo purpose only -->
 </div>
@@ -222,13 +258,13 @@
 
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="index.html" class="text-white">Home</a>
+                        <a href="index.ejs" class="text-white">Home</a>
                     </li>
                     <li>
-                        <a href="about.html" class="text-white">About</a>
+                        <a href="about.ejs" class="text-white">About</a>
                     </li>
                     <li>
-                        <a href="contact.html" class="text-white">Contact</a>
+                        <a href="contact.ejs" class="text-white">Contact</a>
                     </li>
                     <li>
                         <a href="arizona.html" class="text-white">Projects</a>

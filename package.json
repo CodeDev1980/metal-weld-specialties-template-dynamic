@@ -32,9 +32,9 @@
     "mongoose-unique-validator": "^3.1.0"
   },
   "bugs": {
-    "url": "#"
+    "url": "https://github.com/CodeDev1980/metal-weld-specialties-template-dynamic"
   },
-  "homepage": "#",
+  "homepage": "https://github.com/CodeDev1980/metal-weld-specialties-template-dynamic",
   "engines": {
     "node": "^18.13.0"
   }

@@ -61,13 +61,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.html">Home</a>
+                        <a class="nav-link text-dark" href="index.ejs">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-bg-dark" aria-current="page" href="about.html">About</a>
+                        <a class="nav-link text-dark" href="about.ejs">About</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        <a class="nav-link text-dark" href="contact.ejs">Contact</a>
                     </li>
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
@@ -83,16 +84,13 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>
-                                <a class="dropdown-item" href="arizona.html">Arizona</a>
+                                <a class="dropdown-item" href="arizona.ejs">Arizona</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="california.html">California </a>
+                                <a class="dropdown-item active text-bg-dark" aria-current="page" href="nevada.ejs">Nevada</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="hawaii.html">Hawaii</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="nevada.html">Nevada</a>
+                                <a class="dropdown-item" href="hawaii.ejs">Hawaii</a>
                             </li>
                         </ul>
                     </li>
@@ -100,7 +98,7 @@
                 <ul class="navbar-nav d-flex flex-row">
 
                     <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link text-dark" href="staffAccount.html">
+                        <a class="nav-link text-dark" href="staffAccount.ejs">
                             Staff Login
                         </a>
                     </li>
@@ -132,69 +130,55 @@
 <div class="container-fluid my-5 py-5">
     <!-- Container for demo purpose only -->
     <div class="container pt-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.ejs">Home</a></li>
+                <li class="breadcrumb-item"><a href="california.ejs">California Projects</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Project Data</li>
+            </ol>
+        </nav>
 
         <!-- Section: Design Block -->
         <section class="mb-8">
-            <style>
-                .rounded-t-2-5 {
-                    border-top-left-radius: 0.75rem;
-                    border-top-right-radius: 0.75rem;
-                }
-                @media (min-width: 992px) {
-                    .rounded-tr-lg-0 {
-                        border-top-right-radius: 0;
-                    }
-                    .rounded-bl-lg-2-5 {
-                        border-bottom-left-radius: 0.75rem;
-                    }
-                }
-            </style>
-            <div class="card rounded-6 shadow-3-soft" style="background-color: #fff9f2">
-                <div class="row g-0 d-flex align-items-center">
-                    <div class="col-lg-6 col-xl-5">
-                        <img src="/img/about-image.png" alt="about us" class="w-100 rounded-t-2-5 rounded-tr-lg-0 rounded-bl-lg-2-5"/>
-                    </div>
-                    <div class="col-lg-6 col-xl-7">
-                        <div class="card-body py-4 py-md-5 py-lg-4 py-xl-5 px-md-5">
-                            <div class="border-top border-dark" style="width: 100px"></div>
-                            <p class="display-4 mt-5 mb-4" style="color: #344e41">About Us</p>
-                            <p>
-                                Metal-Weld Specialties, Inc. <br>
-                                has been servicing the structural steel industry for over 45 years. We maintain an exceptional team of experienced and dedicated employees. Metal-Weld is an AISC certified fabricator and also is an ISO 9001 certified company. In addition, we are an approved fabricator for the City of Phoenix, City of Los Angeles, and Clark County, Nevada. Our headquarters and fabrication plant are located in Peoria, Arizona allowing us to service our customers in Arizona, Nevada, California, and Hawaii.
-                            </p>
-                            <p class="mb-4 pb-2">
-                                Metal-Weld is here to meet and exceed your structural steel fabrication and erection needs. We can fabricate up to 500 tons of steel per week in our plant and have the capability of running in excess of 3,300 man-hours per week. Here is a partial list of our equipment that will help meet your needs:
-                            </p>
-                            <a class="btn btn-lg btn-dark" href="contact.html" role="button">Contact Us</a>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p class="text-muted mb-4">***** { Single Page Project Info (LOADED FROM DATABASE} *****</p>
+                    <p class="h3 mb-4">Projects We're Proud Of - Team Work Makes The Dream Work</p>
+                    <p class="mb-4 mb-md-5 mb-lg-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo inventore veritatis et quasi architecto beatae vitae dicta explicabo.</p>
                 </div>
-                <div class="row mt-5">
-                    <div class="col-md-12">
-                        <div class="card p-4">
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" class="w-100 rounded-5 mb-4 shadow-3-soft" alt="Sample image"
+                                 data-mdb-toggle="animation"
+                                 data-mdb-animation="fade-in"
+                                 data-mdb-animation-start="onScroll"
+                                 data-mdb-animation-on-scroll="repeat"
+                                 data-mdb-animation-show-on-load="false"
+                                 data-mdb-animation-duration="2000"
+                                 data-mdb-animation-delay="100">
                             <div class="row">
-                                <div class="col-md-4 p-2">
-                                    <ul>
-                                        <li>Horizontal Hem Saw w/ W44 capacity</li>
-                                        <li>CNC Franklin Structural Fabricator</li>
-                                        <li>CNC Ficep Drill line w/ W44 capacity</li>
-                                        <li>CNC Amtek Coping Machine</li>
-                                        <li>Cambro cambering machine w/ W44x490 capacity</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-8 p-2">
-                                    <h2>Certifications & Licenses</h2>
-                                    <img src="https://www.metal-weld.com/certimage1.jpg" class="img-fluid" alt="certifications and license">
-                                </div>
-                                <div>
-                                    <p>
-                                        <strong>MW Erectors, Inc.</strong>: Arizona Contractors License #A-11 104579, Arizona Contractors License #C-17 249155, California Contractors License #C-51 772752, Nevada Contractors License #C-14 0049728
-                                    </p>
-                                    <p>
-                                        <strong>Union Affiliation</strong>: Arizona Ironworkers Local #75, Hawaii Ironworkers Local #625, Nevada Ironworkers Local #433, California Ironworkers Local #433
-                                    </p>
+                                <div class="col-md-9 offset-md-3">
+                                    <img src=" https://mdbootstrap.com/img/Photos/Others/img4.jpg" class="w-100 rounded-5 mb-4 mb-md-0 shadow-3-soft" alt="Sample image"
+                                         data-mdb-toggle="animation"
+                                         data-mdb-animation="fade-in"
+                                         data-mdb-animation-start="onScroll"
+                                         data-mdb-animation-on-scroll="repeat"
+                                         data-mdb-animation-show-on-load="false"
+                                         data-mdb-animation-duration="2000"
+                                         data-mdb-animation-delay="500">
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" class="w-100 rounded-5 mt-md-5 shadow-3-soft" alt="Sample image"
+                                 data-mdb-toggle="animation"
+                                 data-mdb-animation="fade-in"
+                                 data-mdb-animation-start="onScroll"
+                                 data-mdb-animation-on-scroll="repeat"
+                                 data-mdb-animation-show-on-load="false"
+                                 data-mdb-animation-duration="2000"
+                                 data-mdb-animation-delay="300">
                         </div>
                     </div>
                 </div>
@@ -238,16 +222,16 @@
 
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="index.html" class="text-white">Home</a>
+                        <a href="index.ejs" class="text-white">Home</a>
                     </li>
                     <li>
-                        <a href="about.html" class="text-white">About</a>
+                        <a href="about.ejs" class="text-white">About</a>
                     </li>
                     <li>
-                        <a href="contact.html" class="text-white">Contact</a>
+                        <a href="contact.ejs" class="text-white">Contact</a>
                     </li>
                     <li>
-                        <a href="arizona.html" class="text-white">Projects</a>
+                        <a href="arizona.ejs" class="text-white">Projects</a>
                     </li>
                 </ul>
             </div>

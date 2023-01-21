@@ -61,14 +61,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.html">Home</a>
+                        <a class="nav-link text-dark" href="index.ejs">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="about.html">About</a>
+                        <a class="nav-link text-dark" href="about.ejs">About</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact.html">Contact</a>
+                        <a class="nav-link text-dark" href="contact.ejs">Contact</a>
                     </li>
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
@@ -84,13 +83,16 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>
-                                <a class="dropdown-item" href="arizona.html">Arizona</a>
+                                <a class="dropdown-item" href="arizona.ejs">Arizona</a>
                             </li>
                             <li>
-                                <a class="dropdown-item active text-bg-dark" aria-current="page" href="nevada.html">Nevada</a>
+                                <a class="dropdown-item" href="nevada.ejs">Nevada</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="hawaii.html">Hawaii</a>
+                                <a class="dropdown-item" href="california.ejs">California</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="hawaii.ejs">Hawaii</a>
                             </li>
                         </ul>
                     </li>
@@ -98,7 +100,7 @@
                 <ul class="navbar-nav d-flex flex-row">
 
                     <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link text-dark" href="staffAccount.html">
+                        <a class="nav-link active text-bg-dark" aria-current="page" href="staffAccount.html">
                             Staff Login
                         </a>
                     </li>
@@ -128,66 +130,11 @@
 <!--Section: Design Block-->
 <!-- Container for demo purpose -->
 <div class="container-fluid my-5 py-5">
-    <!-- Container for demo purpose only -->
-    <div class="container pt-5">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="california.html">California Projects</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Project Data</li>
-            </ol>
-        </nav>
-
-        <!-- Section: Design Block -->
-        <section class="mb-8">
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <p class="text-muted mb-4">***** { Single Page Project Info (LOADED FROM DATABASE} *****</p>
-                    <p class="h3 mb-4">Projects We're Proud Of - Team Work Makes The Dream Work</p>
-                    <p class="mb-4 mb-md-5 mb-lg-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus antium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo inventore veritatis et quasi architecto beatae vitae dicta explicabo.</p>
-                </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img3.jpg" class="w-100 rounded-5 mb-4 shadow-3-soft" alt="Sample image"
-                                 data-mdb-toggle="animation"
-                                 data-mdb-animation="fade-in"
-                                 data-mdb-animation-start="onScroll"
-                                 data-mdb-animation-on-scroll="repeat"
-                                 data-mdb-animation-show-on-load="false"
-                                 data-mdb-animation-duration="2000"
-                                 data-mdb-animation-delay="100">
-                            <div class="row">
-                                <div class="col-md-9 offset-md-3">
-                                    <img src=" https://mdbootstrap.com/img/Photos/Others/img4.jpg" class="w-100 rounded-5 mb-4 mb-md-0 shadow-3-soft" alt="Sample image"
-                                         data-mdb-toggle="animation"
-                                         data-mdb-animation="fade-in"
-                                         data-mdb-animation-start="onScroll"
-                                         data-mdb-animation-on-scroll="repeat"
-                                         data-mdb-animation-show-on-load="false"
-                                         data-mdb-animation-duration="2000"
-                                         data-mdb-animation-delay="500">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" class="w-100 rounded-5 mt-md-5 shadow-3-soft" alt="Sample image"
-                                 data-mdb-toggle="animation"
-                                 data-mdb-animation="fade-in"
-                                 data-mdb-animation-start="onScroll"
-                                 data-mdb-animation-on-scroll="repeat"
-                                 data-mdb-animation-show-on-load="false"
-                                 data-mdb-animation-duration="2000"
-                                 data-mdb-animation-delay="300">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Section: Design Block -->
-
-    </div>
-    <!-- Container for demo purpose only -->
+    <h1 class="text-center display-5 mb-0">Admin Page</h1>
+    <p>
+        Here you can create new projects and delete old ones. If you have any trouble with logging in or need assistance, please contact the
+        <a href="mailto:stephenbrooks714@gmail.com" class="text-decoration-underline fw-bold">Developer</a>.
+    </p>
 </div>
 <!-- Container for demo purpose -->
 
@@ -222,16 +169,16 @@
 
                 <ul class="list-unstyled mb-0">
                     <li>
-                        <a href="index.html" class="text-white">Home</a>
+                        <a href="index.ejs" class="text-white">Home</a>
                     </li>
                     <li>
-                        <a href="about.html" class="text-white">About</a>
+                        <a href="about.ejs" class="text-white">About</a>
                     </li>
                     <li>
-                        <a href="contact.html" class="text-white">Contact</a>
+                        <a href="contact.ejs" class="text-white">Contact</a>
                     </li>
                     <li>
-                        <a href="arizona.html" class="text-white">Projects</a>
+                        <a href="arizona.ejs" class="text-white">Projects</a>
                     </li>
                 </ul>
             </div>

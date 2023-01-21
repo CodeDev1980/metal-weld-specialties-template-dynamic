@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header') -%>
+    <style>
+      .img-position {
+        position: absolute;
+        top: 140px;
+        left: 40px;
+      }
+      .logoBrandSize {
+        height: 140px;
+      }
+      .introFit {
+        padding-top: 430px;
+      }
+      .card.hover-shadow-light, .hover-shadow-light {
+        transition: all .5s ease-in-out;
+      }
+
+      .card.hover-shadow-light:hover, .hover-shadow-light:hover {
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
+        transition: all .5s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Start your project here-->
+    <!--Section: Design Block-->
+    <header>
+      <!-- Navbar -->
+      <%- include('partials/navBar') -%>
+      <!-- Navbar -->
+
+      <!--Section: Design Block-->
+      <%- include('home-parts/home-intro') -%>
+      <!--Section: Design Block-->
+    </header>
+
+    <!--Section: Design Block-->
+    <!-- Container for demo purpose -->
+    <div class="container-fluid my-5 py-5">
+
+      <%- include('home-parts/home-features') -%>
+
+      <section class="container-fluid text-center my-5 py-2">
+        <%- include('home-parts/home-choose-us') -%>
+        <!-- Container for demo purpose -->
+        <div class="container-fluid my-5 p-5 shadow-5">
+
+          <!--Section: Design Block-->
+          <%- include('home-parts/home-projects-feed') -%>
+          <!--Section: Design Block-->
+
+        </div>
+        <!-- Container for demo purpose -->
+      </section>
+
+      <!-- Container for demo purpose -->
+      <%- include('home-parts/home-contact-section') -%>
+      <!-- Container for demo purpose -->
+    </div>
+    <!-- Container for demo purpose -->
+    <!-- Footer -->
+    <%- include('partials/footer') -%>
+    <!-- Footer -->
+    <!-- End your project here-->
+    <%- include('partials/scripts') -%>
+  </body>
+</html>

@@ -40,6 +40,14 @@
       box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
       transition: all .5s ease-in-out;
     }
+    @media(max-width: 850px){
+      #hide1 {
+        display: none;
+      }
+      #hide2 {
+        display: none;
+      }
+    }
   </style>
 </head>
 
@@ -61,13 +69,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link text-dark" href="index.html">Home</a>
+            <a class="nav-link text-dark" href="index.ejs">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="about.html">About</a>
+            <a class="nav-link text-dark" href="about.ejs">About</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link active text-bg-dark" aria-current="page" href="contact.html">Contact</a>
+            <a class="nav-link text-dark" href="contact.ejs">Contact</a>
           </li>
           <!-- Dropdown -->
           <li class="nav-item dropdown">
@@ -83,16 +92,16 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <a class="dropdown-item" href="arizona.html">Arizona</a>
+                <a class="dropdown-item" href="arizona.ejs">Arizona</a>
               </li>
               <li>
-                <a class="dropdown-item" href="nevada.html">Nevada</a>
+                <a class="dropdown-item" href="nevada.ejs">Nevada</a>
               </li>
               <li>
-                <a class="dropdown-item" href="california.html">California</a>
+                <a class="dropdown-item active text-bg-dark" aria-current="page" href="california.html">California</a>
               </li>
               <li>
-                <a class="dropdown-item" href="hawaii.html">Hawaii</a>
+                <a class="dropdown-item" href="hawaii.ejs">Hawaii</a>
               </li>
             </ul>
           </li>
@@ -100,7 +109,7 @@
         <ul class="navbar-nav d-flex flex-row">
 
           <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link text-dark" href="staffAccount.html">
+            <a class="nav-link text-dark" href="staffAccount.ejs">
               Staff Login
             </a>
           </li>
@@ -130,67 +139,93 @@
 <!--Section: Design Block-->
 <!-- Container for demo purpose -->
 <div class="container-fluid my-5 py-5">
-  <div class="container my-5 py-5" itemid="contact us">
-    <h1 class="display-3 fw-bold text-center mb-3" itemref="contact page">Contact Us</h1>
+  <!-- Container for demo purpose only -->
+  <div class="container pt-5">
 
-    <div class="row">
-      <div class="col-md-8 p-2">
-        <form action="thankYou" method="POST" name="contactPage"><input type="hidden" name="form-name" value="contactPage">
-          <!-- Name input -->
-          <div class="form-outline mb-4">
-            <input type="text" required="" id="form4Example1" name="name" class="form-control" fdprocessedid="3edl6m">
-            <label class="form-label" for="form4Example1" style="margin-left: 0px;">Name</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
+    <!-- Section: Design Block -->
+    <section class="mb-8">
+      <div class="row">
+        <div class="col-2 text-center">
+          <a href="nevada.ejs">
+            <h5><i class="fas fa-chevron-circle-left"></i> <span id="hide1">Nevada</span></h5>
+          </a>
+        </div>
 
-          <!-- Name input -->
-          <div class="form-outline mb-4">
-            <label for="state" style="margin-left: 0px;">Call Back Time</label>
-            <input type="datetime-local" value="" required="" id="state" name="callBackTime" class="form-control">
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 92.8px;"></div><div class="form-notch-trailing"></div></div></div>
+        <div class="col-8 text-center">
+          <h3 class="mb-4 pb-2">California Projects</h3>
+          <p class="mx-auto lead mb-5 pb-3" style="max-width: 700px;">
+            ( Office Location Pending ) <br>
+            8137 N 83rd Ave, Peoria, AZ <br>
+            (623) 979-1117
+          </p>
+        </div>
 
-          <!-- Name input -->
-          <div class="form-outline mb-4">
-            <input type="text" required="" id="company" name="company" class="form-control" fdprocessedid="z54bl">
-            <label class="form-label" for="company" style="margin-left: 0px;">Company</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 62.4px;"></div><div class="form-notch-trailing"></div></div></div>
+        <div class="col-2 text-center">
+          <a href="hawaii.ejs">
+            <h5><span id="hide2">Hawaii</span> <i class="fas fa-chevron-circle-right"></i></h5>
+          </a>
+        </div>
+      </div>
+      <div class="lightbox">
+        <div class="row text-center">
+          <div class="col-lg-4">
+            <a href="projectB.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+            <img src="/assets/comingsoon.png"
+                 data-mdb-img="/assets/comingsoon.png" alt="Image"
+                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
 
-          <!-- Name input -->
-          <div class="row mb-4 p-2">
-            <div class="col-md-6 form-outline p-2">
-              <input type="text" required="" id="phone" name="phone" class="form-control" fdprocessedid="dvmjzn">
-              <label class="form-label" for="phone" style="margin-left: 0px;">Phone Number</label>
-              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 92.8px;"></div><div class="form-notch-trailing"></div></div></div>
-            <div class="col-md-6 form-outline p-2">
-              <input type="email" id="form4Example2" name="email" class="form-control" fdprocessedid="usmb18">
-              <label class="form-label" for="form4Example2" style="margin-left: 0px;">Email address</label>
-              <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+            <a href="projectB.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+            <img src="/assets/comingsoon.png"
+                 data-mdb-img="/assets/comingsoon.png" alt="Image"
+                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
           </div>
-
-          <!-- Message input -->
-          <div class="form-outline mb-4">
-            <textarea class="form-control" required="" placeholder="Please include the state you are in and a brief summary of work you want done, thank you." name="message" id="form4Example3" rows="4"></textarea>
-            <label class="form-label" for="form4Example3" style="margin-left: 0px;">Message</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
-
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-block mb-4" fdprocessedid="lgyl8">Send</button>
-        </form>
+          <div class="col-lg-4">
+            <a href="projectB.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+            <img src="/assets/comingsoon.png"
+                 data-mdb-img="/assets/comingsoon.png" alt="Image"
+                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+            <a href="projectB.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+            <img src="/assets/comingsoon.png"
+                 data-mdb-img="/assets/comingsoon.png" alt="Image"
+                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+          </div>
+          <div class="col-lg-4">
+            <a href="projectB.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+            <img src="/assets/comingsoon.png"
+                 data-mdb-img="/assets/comingsoon.png" alt="Image"
+                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+            <a href="projectB.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
+            <img src="/assets/comingsoon.png"
+                 data-mdb-img="/assets/comingsoon.png" alt="Image"
+                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h3>Structural Steel Fabrication <br> &amp; Erection Specialties </h3>
-        <p>
-          8137 North 83rd Ave <br>
-          Peoria, Arizona 85345
-        </p>
-        <p>
-          Office: 623-979-1117 <br>
-          Fax: 623-979-9722
-        </p>
-        <img src="/img/contactPage.png" class="img-fluid rounded-3 shadow-2-strong" alt="corporate office">
-      </div>
-
+    </section>
+    <!-- Section: Design Block -->
+    <div class="row row-cols-lg-6 d-flex mx-auto justify-content-center align-items-center text-center">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="nevada.ejs" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="arizona.ejs">Arizona</a></li>
+          <li class="page-item"><a class="page-link" href="#">Nevada</a></li>
+          <li class="page-item"><a class="page-link active text-primary" href="california.html" aria-current="page">California</a></li>
+          <li class="page-item"><a class="page-link" href="hawaii.ejs">Hawaii</a></li>
+          <li class="page-item">
+            <a class="page-link" href="hawaii.ejs" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
+
   </div>
+  <!-- Container for demo purpose only -->
 </div>
 <!-- Container for demo purpose -->
 
@@ -225,16 +260,16 @@
 
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="index.html" class="text-white">Home</a>
+            <a href="index.ejs" class="text-white">Home</a>
           </li>
           <li>
-            <a href="about.html" class="text-white">About</a>
+            <a href="about.ejs" class="text-white">About</a>
           </li>
           <li>
-            <a href="contact.html" class="text-white">Contact</a>
+            <a href="contact.ejs" class="text-white">Contact</a>
           </li>
           <li>
-            <a href="arizona.html" class="text-white">Projects</a>
+            <a href="arizona.ejs" class="text-white">Projects</a>
           </li>
         </ul>
       </div>

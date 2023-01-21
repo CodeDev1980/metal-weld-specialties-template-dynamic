@@ -15,8 +15,8 @@ module.exports = merge(common, {
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: Path.resolve(__dirname, '../src/index.html'),
+      filename: 'index.ejs',
+      template: Path.resolve(__dirname, '../src/index.ejs'),
       inject: false,
     }),
   ],
