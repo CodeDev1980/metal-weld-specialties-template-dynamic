@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -37,5 +37,8 @@
   "homepage": "https://github.com/CodeDev1980/metal-weld-specialties-template-dynamic",
   "engines": {
     "node": "^18.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
