@@ -7,11 +7,6 @@ const ArizonaProjectSchema = new Schema ({
     image: String,
     location: String,
     dateFinished: String,
-    userid: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     datePosted: {
         type: Date,
         default: new Date

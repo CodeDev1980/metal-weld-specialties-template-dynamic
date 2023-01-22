@@ -12,24 +12,19 @@
     "url": "https://metal-weld.herokuapp.com/"
   },
   "keywords": [
-    "wb developer",
-    "JavaScript Developer"
+    "Metal Fabrication",
+    "Welding"
   ],
   "author": "\"Stephen Brooks\"",
   "license": "ISC",
   "dependencies": {
     "async": "^3.2.4",
-    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
-    "connect-flash": "^0.1.1",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "express-fileupload": "^1.4.0",
-    "express-session": "^1.17.3",
     "memory-cache": "^0.2.0",
-    "mongoose": "^6.8.1",
-    "mongoose-unique-validator": "^3.1.0"
+    "mongoose": "^6.8.1"
   },
   "bugs": {
     "url": "https://github.com/CodeDev1980/metal-weld-specialties-template-dynamic"

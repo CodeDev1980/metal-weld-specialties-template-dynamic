@@ -19,11 +19,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
                 </li>
-                <% if(loggedIn){ %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin">Admin</a>
-                    </li>
-                <% } %>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a
@@ -53,24 +48,6 @@
                 </li>
             </ul>
             <ul class="navbar-nav d-flex flex-row">
-                <% if(loggedIn){ %>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="/staff/logout">
-                            Logout
-                        </a>
-                    </li>
-                <% } else { %>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="/staffAccount">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="/tokenPass">
-                            SignUp
-                        </a>
-                    </li>
-                <% } %>
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link" href="https://www.linkedin.com/company/metal-weld-specialties-inc-/about/" target="_blank">
                         <img src="/img/linkedin.png" class="img-fluid" style="width: 25px; height: 25px;" alt="linkedin profile">

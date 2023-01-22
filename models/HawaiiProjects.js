@@ -7,11 +7,6 @@ const HawaiiProjectSchema = new Schema ({
     image: String,
     url: String,
     dateFinished: String,
-    userid: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     datePosted: {
         type: Date,
         default: new Date
