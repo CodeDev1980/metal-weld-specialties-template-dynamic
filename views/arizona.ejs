@@ -22,14 +22,23 @@
             box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
             transition: all .5s ease-in-out;
         }
-        @media(max-width: 850px){
+        .cardStyle {
+            border: none!important;
+            width: 19rem;
+        }
+        @media(max-width: 900px){
             #hide1 {
                 display: none;
             }
             #hide2 {
                 display: none;
             }
+            .cardStyle {
+                border: none!important;
+                width: 100%;
+            }
         }
+
     </style>
 </head>
 
@@ -73,40 +82,15 @@
                 </div>
             </div>
             <div class="lightbox">
-                <div class="row text-center">
+                <div class="row row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center me-1 py-2">
                     <% for(i=0; i < arizonaPost.length; i++){ %>
-                    <div class="col-lg-4">
+                    <div class="card cardStyle">
                         <a href="/projectA/<%= arizonaPost[i]._id %>" class="btn mb-2 btn-outline-black">View Project Details</a>
                         <img src="<%= arizonaPost[i].image %>"
-                             data-mdb-img="/assets/CCV%20LaveenArizona.jpg" alt="Image"
+                             data-mdb-img="<%= arizonaPost[i].image %>" alt="<%= arizonaPost[i].title %>"
                              class="w-100 mb-4 rounded-5 shadow-3-soft" />
-
-                        <a href="/projectA" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/ClubHouse.png"
-                             data-mdb-img="/assets/ClubHouse.png" alt="Image"
-                             class="w-100 mb-4 mb-lg-0 rounded-5 shadow-3-soft" />
                     </div>
                     <% } %>
-                    <div class="col-lg-4">
-                        <a href="/projectA" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/FlagstaffMedicalCenter-Arizona.jpg"
-                             data-mdb-img="/assets/FlagstaffMedicalCenter-Arizona.jpg" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                        <a href="/projectA" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/GCC-Arizona.jpg"
-                             data-mdb-img="/assets/GCC-Arizona.jpg" alt="Image"
-                             class="w-100 mb-4 mb-lg-0 rounded-5 shadow-3-soft" />
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="/projectA" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/Luke%20Air%20Force%20Base%20-%20Arizona.JPG"
-                             data-mdb-img="/assets/Luke%20Air%20Force%20Base%20-%20Arizona.JPG" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                        <a href="/projectA" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/NAU%20Scince%20Building%20-%20Flagstaff%20Arizona.jpg"
-                             data-mdb-img="/assets/NAU%20Scince%20Building%20-%20Flagstaff%20Arizona.jpg" alt="Image"
-                             class="w-100 rounded-5 shadow-3-soft" />
-                    </div>
                 </div>
             </div>
         </section>

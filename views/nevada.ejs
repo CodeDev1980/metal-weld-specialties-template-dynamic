@@ -22,12 +22,20 @@
       box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
       transition: all .5s ease-in-out;
     }
-    @media(max-width: 850px){
+    .cardStyle {
+      border: none!important;
+      width: 19rem;
+    }
+    @media(max-width: 900px){
       #hide1 {
         display: none;
       }
       #hide2 {
         display: none;
+      }
+      .cardStyle {
+        border: none!important;
+        width: 100%;
       }
     }
   </style>
@@ -73,39 +81,15 @@
         </div>
       </div>
       <div class="lightbox">
-        <div class="row text-center">
-          <div class="col-lg-4">
-            <a href="/projectC" class="btn mb-2 btn-outline-black">View Project Details</a>
-            <img src="/assets/Hard%20Rock%20-%20Las%20Vegas%20NV.jpg"
-                 data-mdb-img="/assets/Hard%20Rock%20-%20Las%20Vegas%20NV.jpg" alt="Image"
-                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
-
-            <a href="/projectC" class="btn mb-2 btn-outline-black">View Project Details</a>
-            <img src="/assets/Hard%20Rock%20(2)%20-%20Las%20Vegas%20NV.jpg"
-                 data-mdb-img="/assets/Hard%20Rock%20(2)%20-%20Las%20Vegas%20NV.jpg" alt="Image"
-                 class="w-100 mb-4 mb-lg-0 rounded-5 shadow-3-soft" />
-          </div>
-          <div class="col-lg-4">
-            <a href="/projectC" class="btn mb-2 btn-outline-black">View Project Details</a>
-            <img src="/assets/Playa%20Vista%20-%20Las%20Vegas%20NV.jpg"
-                 data-mdb-img="/assets/Playa%20Vista%20-%20Las%20Vegas%20NV.jpg" alt="Image"
-                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
-            <a href="/projectC" class="btn mb-2 btn-outline-black">View Project Details</a>
-            <img src="/assets/Playa%20Vista%20-%20Las%20Vegas%20NV.jpg"
-                 data-mdb-img="/assets/Playa%20Vista%20-%20Las%20Vegas%20NV.jpg" alt="Image"
-                 class="w-100 mb-4 mb-lg-0 rounded-5 shadow-3-soft" />
-          </div>
-          <div class="col-lg-4">
-            <a href="projectC.ejs" class="btn mb-2 btn-outline-black">View Project Details</a>
-            <img src="/assets/Lucky%20Dragon%20-%20Las%20Vegas%20NV.jpg"
-                 data-mdb-img="/assets/Lucky%20Dragon%20-%20Las%20Vegas%20NV.jpg" alt="Image"
-                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
-            <a href="/projectC" class="btn mb-2 btn-outline-black">View Project Details</a>
-            <img src="/assets/Lucky%20Dragon2%20-%20Las%20Vegas%20NV.jpg"
-                 style="max-height: 310px;"
-                 data-mdb-img="/assets/Lucky%20Dragon2%20-%20Las%20Vegas%20NV.jpg" alt="Image"
-                 class="w-100 rounded-5 shadow-3-soft" />
-          </div>
+        <div class="row row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center me-1 py-2">
+          <% for(i=0; i < nevadaProjects.length; i++){ %>
+            <div class="card cardStyle">
+              <a href="/projectB/<%= nevadaProjects[i]._id %>" class="btn mb-2 btn-outline-black">View Project Details</a>
+              <img src="<%= nevadaProjects[i].image %>"
+                   data-mdb-img="<%= nevadaProjects[i].image %>" alt="<%= nevadaProjects[i].title %>"
+                   class="w-100 mb-4 rounded-5 shadow-3-soft" />
+            </div>
+          <% } %>
         </div>
       </div>
     </section>

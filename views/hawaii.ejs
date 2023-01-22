@@ -22,12 +22,20 @@
             box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
             transition: all .5s ease-in-out;
         }
-        @media(max-width: 850px){
+        .cardStyle {
+            border: none!important;
+            width: 19rem;
+        }
+        @media(max-width: 900px){
             #hide1 {
                 display: none;
             }
             #hide2 {
                 display: none;
+            }
+            .cardStyle {
+                border: none!important;
+                width: 100%;
             }
         }
     </style>
@@ -74,38 +82,15 @@
                 </div>
             </div>
             <div class="lightbox">
-                <div class="row text-center">
-                    <div class="col-lg-4">
-                        <a href="/projectH" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/comingsoon.png"
-                             data-mdb-img="/assets/comingsoon.png" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-
-                        <a href="/projectH" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/comingsoon.png"
-                             data-mdb-img="/assets/comingsoon.png" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="/projectH" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/comingsoon.png"
-                             data-mdb-img="/assets/comingsoon.png" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                        <a href="/projectH" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/comingsoon.png"
-                             data-mdb-img="/assets/comingsoon.png" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="/projectH" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/comingsoon.png"
-                             data-mdb-img="/assets/comingsoon.png" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                        <a href="/projectH" class="btn mb-2 btn-outline-black">View Project Details</a>
-                        <img src="/assets/comingsoon.png"
-                             data-mdb-img="/assets/comingsoon.png" alt="Image"
-                             class="w-100 mb-4 rounded-5 shadow-3-soft" />
-                    </div>
+                <div class="row row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center me-1 py-2">
+                    <% for(i=0; i < hawaiiProjects.length; i++){ %>
+                        <div class="card cardStyle">
+                            <a href="/projectH/<%= hawaiiProjects[i]._id %>" class="btn mb-2 btn-outline-black">View Project Details</a>
+                            <img src="<%= hawaiiProjects[i].image %>"
+                                 data-mdb-img="<%= hawaiiProjects[i].image %>" alt="<%= hawaiiProjects[i].title %>"
+                                 class="w-100 mb-4 rounded-5 shadow-3-soft" />
+                        </div>
+                    <% } %>
                 </div>
             </div>
         </section>
