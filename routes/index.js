@@ -24,6 +24,7 @@ const hawaiiController = require('../controllers/HawaiiPage');
 const singleHawaiiPageController = require('../controllers/SingleHawaiiProject');
 const deleteHawaiiProjectController = require('../controllers/deleteHawaiiProject');
 // Staff DB
+const tokenPassController = require('../controllers/tokenPassPage');
 const registerStaffController = require('../controllers/registerStaff');
 const newAdminMember = require('../controllers/StoreStaffMember');
 const loginController = require('../controllers/loginStaff');
@@ -60,6 +61,7 @@ router.get('/hawaii', hawaiiController);
 router.get('/projectH/:id', singleHawaiiPageController);
 router.get('/delete/hawaiiProject/:id', authorized, deleteHawaiiProjectController);
 // Admin control
+router.get('/tokenPass', tokenPassController)
 router.get('/registerStaff', registerStaffController);
 router.post('/store/staff', newAdminMember)
 router.get('/staffAccount', loginController);

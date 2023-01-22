@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/header') -%>
+    <style>
+        .img-position {
+            position: absolute;
+            top: 140px;
+            left: 40px;
+        }
+        .logoBrandSize {
+            height: 140px;
+        }
+        .introFit {
+            padding-top: 430px;
+        }
+        .card.hover-shadow-light, .hover-shadow-light {
+            transition: all .5s ease-in-out;
+        }
+
+        .card.hover-shadow-light:hover, .hover-shadow-light:hover {
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,.05), 0 6px 20px 0 rgba(0,0,0,.05);
+            transition: all .5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Start your project here-->
+<!--Section: Design Block-->
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+</header>
+
+<!--Section: Design Block-->
+<!-- Container for demo purpose -->
+<div class="container">
+
+    <div class="d-flex justify-content-center text-center align-items-center" style="height: 100vh;">
+        <div class="col-md-8">
+            <h2>Pre-Registration Form</h2>
+            <form id="form_id" method="post" name="myform">
+                <label class="form-label">Token :</label>
+                <input type="text" class="form-control" name="token" id="token"/>
+                <label class="form-label">Password :</label>
+                <input type="password" class="form-control" name="password" id="password"/>
+                <input type="button" class="btn mt-3 mb-3 btn-primary" value="Continue" id="submit" onclick="validate()"/>
+                <input type="reset" class="btn mt-3 mb-3 btn-warning" value="Clear">
+            </form>
+            <span><b class="note">Note : </b><a href="mailto:info@metal-weld.com">Contact</a> the business owner for the token(s) to register. <br/></span>
+        </div>
+    </div>
+
+</div>
+<!-- Container for demo purpose -->
+
+<!-- Footer -->
+<%- include('partials/footer') -%>
+<!-- Footer -->
+<!-- End your project here-->
+<%- include('partials/scripts') -%>
+
+</body>
+
+</html>
