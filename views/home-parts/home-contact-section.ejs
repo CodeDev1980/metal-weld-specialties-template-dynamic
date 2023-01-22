@@ -12,57 +12,47 @@
                 our secure form below or give us a call.
             </p>
 
-            <form>
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="row mb-4">
-                            <div class="col-md-6 mb-4 mb-md-0">
-                                <div class="form-outline">
-                                    <input type="text" id="form3Example1" class="form-control" />
-                                    <label class="form-label" for="form3Example1">First name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-outline">
-                                    <input type="email" id="form3Example2" class="form-control" />
-                                    <label class="form-label" for="form3Example2">Email Address</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-outline mb-4">
-                            <input type="text" id="form3Example3" class="form-control" />
-                            <label class="form-label" for="form3Example3">Subject</label>
-                        </div>
-                        <div class="form-outline mb-4">
-                            <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                            <label class="form-label" for="form4Example3">Message</label>
-                        </div>
-                        <div class="text-center text-md-start">
-                            <button type="submit" class="btn btn-primary mb-5 mb-md-0">
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <ul class="list-unstyled">
-                            <li>
-                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
-                                <p>8137 North 83rd Ave | Peoria, Arizona 85345</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone fa-2x text-primary"></i>
-                                <p>Office: (623) 979-1117</p>
-                                <p>fax: (623) 979-9722</p>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope fa-2x text-primary"></i>
-                                <p>info@metal-weld.com</p>
-                            </li>
-                        </ul>
+            <form id="contactForm" data-sb-form-api-token="ce4667e2-cd0b-48d0-9079-7718abc36d5f">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                    <label for="emailAddress">Email Address</label>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="yourName" type="text" placeholder="Your Name" data-sb-validations="required" />
+                    <label for="yourName">Your Name</label>
+                    <div class="invalid-feedback" data-sb-feedback="yourName:required">Your Name is required.</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="YourPosition" aria-label="YourPosition">
+                        <option value="admin">admin</option>
+                        <option value="manager">manager</option>
+                        <option value="business owner">business owner</option>
+                        <option value="project coordinator">project coordinator</option>
+                    </select>
+                    <label for="YourPosition">Your Position</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                    <label for="message">Message</label>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                </div>
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                        <p>To activate this form, sign up at</p>
+                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                     </div>
                 </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                </div>
             </form>
-
+            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         </section>
         <!--Section: Design Block-->
 
